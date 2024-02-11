@@ -4,10 +4,12 @@ function ColorPicker() {
 
   const [color, setColor] = useState("#FFFFFF");
 
-
+  const handleColorChange = (e) => {
+    setColor(e.target.value);
+  }
 
 return(
-  <div>
+  <div className="color-picker-container">
     <h1>Color Picker</h1>
     <div className="color-display" style={{backgroundColor: color}}>
       <p>Selcted Color: {color} </p>
